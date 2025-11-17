@@ -9,11 +9,9 @@ public class Choice {
         while (true) {
             System.out.print("Введите номер статьи для открытия (1-" + max + "): ");
             if (!scanner.hasNextInt()) {
-                System.out.println("Ошибка: введите число.");
+                System.out.println("Ошибка: введите целое число.");
                 scanner.next();
                 continue;
-            } else if (scanner.hasNextFloat()) {
-                System.out.println("Ошибка: номер статьи должен быть целым.");
             }
             choice = scanner.nextInt();
             if (choice > 0 && choice < 11) {
